@@ -36,7 +36,7 @@ class Mixpanel(object):
         """
         self._token = token
         self._api_key = api_key
-        self._consumer = consumer or Consumer(self._api_key)
+        self._consumer = consumer or Consumer(api_key=self._api_key)
 
     def _now(self):
         return time.time()
